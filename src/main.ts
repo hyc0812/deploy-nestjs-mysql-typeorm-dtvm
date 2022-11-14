@@ -9,3 +9,6 @@ async function bootstrap() {
   await app.listen(3001);
 }
 bootstrap();
+
+
+// npm run build && npm run start:dev

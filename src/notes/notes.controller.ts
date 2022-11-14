@@ -11,7 +11,7 @@ import { ParseIntPipe } from '@nestjs/common/pipes/parse-int.pipe';
 import { Note } from './note.entity';
 import { NotesService } from './notes.service';
 
-@Controller('notes')
+@Controller('dt')
 export class NotesController {
   constructor(private notesService: NotesService) {}
 

@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  dtserver:
+    build: .
+    ports:
+      - 3001:3001
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: 2a04bf34fdf0
+    environment:
+      - MYSQL_DATABASE=digitaltwins
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+    ports: 
+      - 3306:3306

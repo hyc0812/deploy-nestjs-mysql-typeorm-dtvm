@@ -29,7 +29,7 @@ export class NotesService {
     if (!editedNote) {
       throw new NotFoundException('Note is not found');
     }
-    editedNote.dtid = note.dtid;
+    
     editedNote.dtname = note.dtname;
     editedNote.dttemperature = note.dttemperature;
     editedNote.dttemperatureAlert = note.dttemperatureAlert;

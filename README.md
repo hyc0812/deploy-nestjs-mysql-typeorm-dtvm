@@ -38,3 +38,11 @@ hyc0812/yong_dt:1.1 `"host": "host.docker.internal"`
 
 hyc0812/yong_dt:1.1 `"host": "10.128.0.4"`
  
+ 
+### GCP Compute Engine
+
+External IP: 34.28.249.145 
+
+Use this to luanch request.
+
+

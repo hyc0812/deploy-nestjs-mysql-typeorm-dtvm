@@ -1,10 +1,11 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "host.docker.internal",
     "port": 3305,
     "username": "root",
     "password": "password",
     "database": "digitaltwins",
     "entities": ["dist/**/*.entity{.ts,.js}"],
+    "autoLoadEntities": true,
     "synchronize": true
 }

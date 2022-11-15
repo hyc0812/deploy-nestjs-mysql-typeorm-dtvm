@@ -1,5 +1,11 @@
 version: '3.9'
 services:
+  server:
+    build: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mysql
   mysql:
     environment:
       - MYSQL_DATABASE=digitaltwins
@@ -16,3 +22,4 @@ services:
     ports:
       - "3305:3306"
     image: mysql
+

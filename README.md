@@ -29,3 +29,20 @@ docker login
 docker push <DOCKER_USERNAME>/<IMAGE_NAME>:<TAG>
 ```
 e.g., `docker push hyc0812/yong_dt:1.1`
+
+
+#### memo: image versions:
+
+
+hyc0812/yong_dt:1.1 `"host": "host.docker.internal"`
+
+hyc0812/yong_dt:1.2 `"host": "10.128.0.4"`
+ 
+ 
+### GCP Compute Engine
+
+External IP: 34.28.249.145 
+
+Use this to luanch request.
+
+

@@ -1,31 +1,31 @@
-# NestJs MySQL TypeORM Sample
+### Yong's Mock-Up Digital Twins Project
 
-This project is sample application that demonstrates storing and receiving data in MySQL database using NestJS framework and TypeORM.
 
-![](https://cdn-images-1.medium.com/max/800/1*zeOv4blDpgcoqTLUvfmbXQ.png)
+Commands that always used:
 
-It's a source code for the following article on the medium:
+To delete all **containers** including its volumes use:
 
-- https://medium.com/@zoransasko/using-nestjs-mysql-typeorm-in-building-simple-notes-app-5cdbee9712e0
+```docker
+docker rm -vf $(docker ps -aq)
+```
 
-In order to start this sample, please make sure that you specify the right data for establishing MySQL connection (in 'ormconfig.json' file, make sure that 'username', 'password' and 'database' values matches your MySQL server values):
+To delete all the **images**,
+
 ```
-{
-    "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
-    "username": "root",
-    "password": "root",
-    "database": "test",
-    "entities": ["dist/**/*.entity{.ts,.js}"],
-    "synchronize": true
-}
+docker rmi -f $(docker images -aq)
 ```
-Then please install all the app depencencies by executing the following command:
+
+To build the project to become a image:
+
 ```
-npm install
+docker build -t <DOCKER_USERNAME>/<IMAGE_NAME>:<TAG> .
 ```
-and you can run the app by executing the following command:
+e.g., `docker build -t hyc0812/yong_dt:1.1 .`
+
+To push an image to Docker Hub:
+
 ```
-npm run start:dev
+docker login
+docker push <DOCKER_USERNAME>/<IMAGE_NAME>:<TAG>
 ```
+e.g., `docker push hyc0812/yong_dt:1.1`

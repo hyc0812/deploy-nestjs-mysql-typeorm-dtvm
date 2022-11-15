@@ -1,9 +1,9 @@
 {
     "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
+    "host": "0.0.0.0",
+    "port": 3305,
     "username": "root",
-    "password": "password",
+    "password": "abcdABCD1234",
     "database": "digitaltwins",
     "entities": ["dist/**/*.entity{.ts,.js}"],
     "synchronize": true

@@ -8,11 +8,11 @@ services:
       - mysqldb
 
   mysqldb:
-    image: 2a04bf34fdf0
+    image: mysql
     environment:
       - MYSQL_DATABASE=digitaltwins
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
+      - MYSQL_PASSWORD=root
       - MYSQL_ROOT_PASSWORD=password
     ports: 
       - 3306:3306

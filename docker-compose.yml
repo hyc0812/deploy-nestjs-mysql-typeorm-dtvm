@@ -2,7 +2,7 @@ version: '3.9'
 services:
   mysql:
     environment:
-      - MYSQL_DATABASE=docker_nest
+      - MYSQL_DATABASE=digitaltwins
       - MYSQL_ROOT_PASSWORD=password
       # - MYSQL_TCP_PORT: 3305
     command:

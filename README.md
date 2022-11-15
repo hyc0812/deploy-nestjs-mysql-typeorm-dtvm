@@ -36,7 +36,7 @@ e.g., `docker push hyc0812/yong_dt:1.1`
 
 hyc0812/yong_dt:1.1 `"host": "host.docker.internal"`
 
-hyc0812/yong_dt:1.1 `"host": "10.128.0.4"`
+hyc0812/yong_dt:1.2 `"host": "10.128.0.4"`
  
  
 ### GCP Compute Engine

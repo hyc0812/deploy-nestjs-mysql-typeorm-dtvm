@@ -1,18 +1,18 @@
-version: "3.9"
+version: '3.9'
 services:
-  dtserver:
-    build: .
-    ports:
-      - 3001:3001
-    depends_on:
-      - mysqldb
-
-  mysqldb:
-    image: mysql
+  mysql:
     environment:
-      - MYSQL_DATABASE=digitaltwins
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=docker_nest
       - MYSQL_ROOT_PASSWORD=password
-    ports: 
-      - 3306:3306
+      # - MYSQL_TCP_PORT: 3305
+    command:
+      - --table_definition_cache=100
+      - --performance_schema=0
+      - --default-authentication-plugin=mysql_native_password
+      - --innodb_use_native_aio=0
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    container_name: mysql8
+    ports:
+      - "3305:3306"
+    image: mysql

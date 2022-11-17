@@ -43,6 +43,6 @@ hyc0812/yong_dt:1.2 `"host": "10.128.0.4"`
 
 External IP: 34.28.249.145 
 
-Use this to luanch request.
+Use this to luanch request. 
 
 

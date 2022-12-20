@@ -1,6 +1,21 @@
 ### Yong's Mock-Up Digital Twins Project
 
 
+endpoint: localhost:3001/
+
+Method: Post localhost:3001/dt
+
+body:
+
+```
+{ 
+    "dtname": "Yong",
+    "dttemperature": 23,
+    "dttemperatureAlert": false
+}
+```
+
+
 Commands that always used:
 
 To delete all **containers** including its volumes use:

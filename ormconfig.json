@@ -1,6 +1,6 @@
 {
     "type": "mysql",
-    "host": "10.128.0.4",
+    "host": "host.docker.internal",
     "port": 3305,
     "username": "root",
     "password": "password",

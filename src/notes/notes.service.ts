@@ -18,22 +18,23 @@ export class NotesService {
 
   async createNote(note: Note) {
     this.notesRepository.save(note);
+    console.log("Requested Data received: ", note);
   }
 
   async remove(id: string): Promise<void> {
     await this.notesRepository.delete(id);
   }
 
-  async editNote(id: number, note: Note): Promise<Note> {
-    const editedNote = await this.notesRepository.findOne(id);
-    if (!editedNote) {
-      throw new NotFoundException('Note is not found');
-    }
+  // async editNote(id: number, note: Note): Promise<Note> {
+  //   const editedNote = await this.notesRepository.findOne(id);
+  //   if (!editedNote) {
+  //     throw new NotFoundException('Note is not found');
+  //   }
     
-    editedNote.dtname = note.dtname;
-    editedNote.dttemperature = note.dttemperature;
-    editedNote.dttemperatureAlert = note.dttemperatureAlert;
-    await editedNote.save();
-    return editedNote;
-  }
+  //   editedNote.dtname = note.dtname;
+  //   editedNote.dttemperature = note.dttemperature;
+  //   editedNote.dttemperatureAlert = note.dttemperatureAlert;
+  //   await editedNote.save();
+  //   return editedNote;
+  // }
 }

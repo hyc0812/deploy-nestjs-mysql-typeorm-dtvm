@@ -11,7 +11,7 @@ import { ParseIntPipe } from '@nestjs/common/pipes/parse-int.pipe';
 import { Note } from './note.entity';
 import { NotesService } from './notes.service';
 
-@Controller('dt')
+@Controller('')
 export class NotesController {
   constructor(private notesService: NotesService) {}
 
@@ -29,11 +29,11 @@ export class NotesController {
     return this.notesService.createNote(note);
   }
 
-  @Patch(':id')
-  async editNote(@Body() note: Note, @Param('id') id: number): Promise<Note> {
-    const noteEdited = await this.notesService.editNote(id, note);
-    return noteEdited;
-  }
+  // @Patch(':id')
+  // async editNote(@Body() note: Note, @Param('id') id: number): Promise<Note> {
+  //   const noteEdited = await this.notesService.editNote(id, note);
+  //   return noteEdited;
+  // }
 
   @Delete(':id')
   remove(@Param('id', ParseIntPipe) id) {

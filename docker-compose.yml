@@ -1,14 +1,19 @@
 version: '3.9'
 services:
   server:
-    image: hyc0812/yong_dt:1.1
-    # build: .
+    image: hyc0812/nestjs-typeorm-server:1.0  
+    # build: 
+    #   context: .
+    #   dockerfile: ./Dockerfile
     ports:
       - "3001:3001"
     depends_on:
       - mysql
+    environment:
+      MYSQL_HOST: "mysql"
+
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     environment:
       - MYSQL_DATABASE=digitaltwins
       - MYSQL_ROOT_PASSWORD=password
@@ -18,9 +23,11 @@ services:
       - --performance_schema=0
       - --default-authentication-plugin=mysql_native_password
       - --innodb_use_native_aio=0
-    volumes:
-      - ./init:/docker-entrypoint-initdb.d
+    # volumes:
+    #   - ./init:/docker-entrypoint-initdb.d
     container_name: mysql8
     ports:
       - "3305:3306"
+  
+
 
